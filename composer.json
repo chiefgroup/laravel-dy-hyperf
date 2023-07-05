@@ -1,0 +1,61 @@
+{
+    "name": "chiefgroup/laravel-dy-hyperf",
+    "type": "library",
+    "license": "MIT",
+    "description": "dy-hyperf RPC laravel provider and facade",
+    "authors": [
+        {
+            "name": "observer",
+            "email": "sxpd7788@gmail.com"
+        }
+    ],
+    "require": {
+        "hyperf/jet": "^0.4.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^6.5 || ^7.5",
+        "hyperf/composer-plugin": "^1.0",
+        "laravel/framework": "^6.0 || ^7.0 || ^8.0",
+        "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+        "phpunit/phpunit": "^8.0 || ^9.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "hyperf/composer-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChiefGroup\\LaravelDy\\ServiceProvider"
+            ],
+            "aliases": {
+                "BannerService": "ChiefGroup\\LaravelDy\\BannerServiceFacade",
+                "ContractService": "ChiefGroup\\LaravelDy\\ContractServiceFacade",
+                "EsignService": "ChiefGroup\\LaravelDy\\EsignServiceFacade",
+                "ProjectService": "ChiefGroup\\LaravelDy\\ProjectServiceFacade"
+            }
+        },
+        "hyperf": {
+            "plugin": {
+                "sort-autoload": {
+                    "hyperf/utils": -1
+                }
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "ChiefGroup\\LaravelDy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChiefGroup\\LaravelDy\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+
+}
