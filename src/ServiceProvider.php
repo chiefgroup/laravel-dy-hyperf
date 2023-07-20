@@ -83,6 +83,16 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
 
             return $clientFactory->create($service = 'ContractService', $protocol = 'jsonrpc-tcp-length-check');
         });
+
+        $this->app->singleton('AccountService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'AccountService', $protocol = 'jsonrpc-tcp-length-check', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_dy.node.host'), $port = config('qf_dy.node.port')],
+                ],
+            ]);
+
+            return $clientFactory->create($service = 'AccountService', $protocol = 'jsonrpc-tcp-length-check');
+        });
     }
 
     /**
@@ -93,6 +103,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
     public function provides()
     {
         return [
+            'AccountService',
             'ContractService',
             'ProjectService',
             'EsignService',

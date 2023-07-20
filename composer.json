@@ -34,7 +34,8 @@
                 "BannerService": "ChiefGroup\\LaravelDy\\BannerServiceFacade",
                 "ContractService": "ChiefGroup\\LaravelDy\\ContractServiceFacade",
                 "EsignService": "ChiefGroup\\LaravelDy\\EsignServiceFacade",
-                "ProjectService": "ChiefGroup\\LaravelDy\\ProjectServiceFacade"
+                "ProjectService": "ChiefGroup\\LaravelDy\\ProjectServiceFacade",
+                "AccountService": "ChiefGroup\\LaravelDy\\AccountServiceFacade"
             }
         },
         "hyperf": {
