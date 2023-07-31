@@ -24,6 +24,8 @@ use Illuminate\Support\Facades\Facade;
  * @method static array companyUpdate(array $params, int $id)
  * @method static array companyDelete(array $params)
  * @method static array companyShow(array $params)
+ * @method static array getUploadUrl(array $params)
+ * @method static array downloadContractFile(array $params)
  */
 class ContractServiceFacade extends Facade
 {
