@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Facade;
  * @method static array companyShow(array $params)
  * @method static array getUploadUrl(array $params)
  * @method static array downloadContractFile(array $params)
+ * @method static array signSettings(array $params)
+ * @method static array saveSignSetting(array $params)
+ * @method static array deleteSignSetting(array $params)
  */
 class ContractServiceFacade extends Facade
 {
