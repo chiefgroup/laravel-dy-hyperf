@@ -67,7 +67,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
         $this->app->singleton('ProjectService', function ($app) use ($clientFactory) {
             ServiceManager::register($service = 'ProjectService', $protocol = 'jsonrpc-tcp-length-check', [
                 ServiceManager::NODES => [
-                    [$host = config('qf_dy.node.host'), $port = config('qf_dy.node.port')],
+                    [$host = config('qf_dy.node.host', 'host.docker.internal'), $port = config('qf_dy.node.port', 9603)],
                 ],
             ]);
 
