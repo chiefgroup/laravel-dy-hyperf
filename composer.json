@@ -32,7 +32,8 @@
                 "ContractService": "ChiefGroup\\LaravelDy\\ContractServiceFacade",
                 "EsignService": "ChiefGroup\\LaravelDy\\EsignServiceFacade",
                 "ProjectService": "ChiefGroup\\LaravelDy\\ProjectServiceFacade",
-                "AccountService": "ChiefGroup\\LaravelDy\\AccountServiceFacade"
+                "AccountService": "ChiefGroup\\LaravelDy\\AccountServiceFacade",
+                "YunkeService": "ChiefGroup\\LaravelDy\\YunkeServiceFacade"
             }
         }
     },
