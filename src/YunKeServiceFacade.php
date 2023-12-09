@@ -14,6 +14,6 @@ class YunKeServiceFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'YunkeService';
+        return 'YunKeService';
     }
 }
