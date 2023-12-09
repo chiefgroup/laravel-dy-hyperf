@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Facade;
  *
  * @method static mixed request(string $code, string $methods, string $path, array $options = [])
  */
-class YunkeServiceFacade extends Facade
+class YunKeServiceFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
