@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Facade;
  * @method static array signSettings(array $params)
  * @method static array saveSignSetting(array $params)
  * @method static array deleteSignSetting(array $params)
+ * @method static array createByTemplate(array $params)
+ *
  */
 class ContractServiceFacade extends Facade
 {
