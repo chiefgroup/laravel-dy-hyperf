@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * Class ContractService
+ *
  * @package App\Facade
  *
  * @method static array accountSearch(array $params = [])
@@ -30,6 +31,11 @@ use Illuminate\Support\Facades\Facade;
  * @method static array saveSignSetting(array $params)
  * @method static array deleteSignSetting(array $params)
  * @method static array createByTemplate(array $params)
+ * @method static array templates(array $params)
+ * @method static array template(array $params, string $projectCode)
+ * @method static mixed createTemplate(array $params)
+ * @method static mixed saveTemplate($id, array $params)
+ * @method static mixed deleteTemplate($id)
  *
  */
 class ContractServiceFacade extends Facade
