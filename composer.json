@@ -34,6 +34,7 @@
                 "BannerService": "ChiefGroup\\LaravelDy\\BannerServiceFacade",
                 "ContractService": "ChiefGroup\\LaravelDy\\ContractServiceFacade",
                 "EsignService": "ChiefGroup\\LaravelDy\\EsignServiceFacade",
+                "NewEsignService": "ChiefGroup\\LaravelDy\\NewEsignServiceFacade",
                 "ProjectService": "ChiefGroup\\LaravelDy\\ProjectServiceFacade",
                 "YunKeService": "ChiefGroup\\LaravelDy\\YunKeServiceFacade",
                 "AccountService": "ChiefGroup\\LaravelDy\\AccountServiceFacade",

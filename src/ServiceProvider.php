@@ -64,6 +64,16 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             return $clientFactory->create($service = 'EsignService', $protocol = 'jsonrpc-tcp-length-check');
         });
 
+        $this->app->singleton('NewEsignService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'NewEsignService', $protocol = 'jsonrpc-tcp-length-check', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_dy.node.host'), $port = config('qf_dy.node.port')],
+                ],
+            ]);
+
+            return $clientFactory->create($service = 'NewEsignService', $protocol = 'jsonrpc-tcp-length-check');
+        });
+
         $this->app->singleton('ProjectService', function ($app) use ($clientFactory) {
             ServiceManager::register($service = 'ProjectService', $protocol = 'jsonrpc-tcp-length-check', [
                 ServiceManager::NODES => [
@@ -127,6 +137,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             'ContractService',
             'ProjectService',
             'EsignService',
+            'NewEsignService',
             'BannerService',
             'YunKeService',
 	        'ProjectBannerService'
